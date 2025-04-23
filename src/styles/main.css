@@ -29,11 +29,76 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: visible;
 }
 
 .hexagon-svg {
     width: 100%;
     height: 100%;
     display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.hamburger-center {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+}
+
+.hamburger-stripes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 48%; /* reduced from 60% */
+    height: 40%; /* reduced from 50% */
+    gap: 14.4%; /* reduced from 18% */
+    position: relative;
+}
+
+.stripe {
+    width: 100%;
+    height: 9.6%; /* reduced from 12% */
+    background: #fff;
+    border: 2px solid #fff;
+    border-radius: 3px;
+    box-sizing: border-box;
+    border-width: 1.4px; /* reduced from 2px by 20% */
+    transition: all 0.8s cubic-bezier(.4,2,.6,1); /* reduced from 0.15s by 100% */
+}
+
+.hexagon-hamburger.active .hamburger-stripes {
+    gap: 0;
+}
+
+.hexagon-hamburger.active .stripe:nth-child(1) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 108%; /* reduced from 135% by 20% */
+    height: 9.6%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.hexagon-hamburger.active .stripe:nth-child(2) {
+    opacity: 0;
+}
+
+.hexagon-hamburger.active .stripe:nth-child(3) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 108%; /* reduced from 135% by 20% */
+    height: 9.6%;
+    transform: translate(-50%, -50%) rotate(-45deg);
 }
 /* ...existing code... */
