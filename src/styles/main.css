@@ -1,0 +1,13 @@
+/* ...existing code... */
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.center-logo {
+    width: 240px;
+    height: 240px;
+}
+/* ...existing code... */
