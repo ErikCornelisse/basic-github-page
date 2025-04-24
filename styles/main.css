@@ -1,6 +1,6 @@
 :root {
     --hexagon-height: 8vw;
-    --hexagon-width: calc(var(--hexagon-heigth)*1.1547);
+    --hexagon-width: calc(var(--hexagon-height)*1.1547);
     --hexagon-gap: max(2vw, 10px);
     --hexagon-dw: calc((var(--hexagon-width) + var(--hexagon-gap)) / 1.4142);
     --hexagon-dh: calc(var(--hexagon-height) + var(--hexagon-gap));    
