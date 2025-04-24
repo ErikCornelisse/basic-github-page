@@ -1,7 +1,9 @@
 :root {
-    --hexagon-size: 8vw;
+    --hexagon-height: 8vw;
+    --hexagon-width: calc(var(--hexagon-heigth)*1.1547);
     --hexagon-gap: max(2vw, 10px);
-    --hexagon-next: calc((var(--hexagon-size) + var(--hexagon-gap)) / 1.4142);
+    --hexagon-dw: calc((var(--hexagon-width) + var(--hexagon-gap)) / 1.4142);
+    --hexagon-dh: calc(var(--hexagon-height) + var(--hexagon-gap));    
 }
 
 .center-container {
@@ -17,8 +19,8 @@
 }
 
 .hexagon {
-    width: var(--hexagon-size);
-    height: var(--hexagon-size);
+    width: var(--hexagon-width);
+    height: var(--hexagon-height);
     min-width: 40px;
     min-height: 40px;
     max-width: 100px;
@@ -54,14 +56,14 @@
 #hexagon-01 {
     position: fixed;
     right: var(--hexagon-gap);
-    bottom: calc(var(--hexagon-gap) + var(--hexagon-size) + (var(--hexagon-gap)/2));
+    bottom: calc(var(--hexagon-gap) + var(--hexagon-dh));
     z-index: 999;
 }
 
 #hexagon-02 {
     position: fixed;
-    right: calc(var(--hexagon-gap) + var(--hexagon-next));
-    bottom: calc(var(--hexagon-gap) + var(--hexagon-next) - (var(--hexagon-size) / 2) + (var(--hexagon-gap)/2));
+    right: calc(var(--hexagon-gap) + var(--hexagon-dw));
+    bottom: calc(var(--hexagon-gap) + var(--hexagon-dh)/2);
     z-index: 999;
 }
 
