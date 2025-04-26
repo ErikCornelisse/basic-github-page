@@ -3,7 +3,8 @@
     --hexagon-h: calc(var(--hexagon-w)*0.866);
     --hexagon-gap: max(2vw, 10px);
     --hexagon-dw: calc(var(--hexagon-w) - var(--hexagon-gap));
-    --hexagon-dh: calc((var(--hexagon-h) + var(--hexagon-gap))*0.5);    
+    --hexagon-hg: calc(var(--hexagon-h) + var(--hexagon-gap));
+    --hexagon-dh: calc(var(--hexagon-h)*0.5 + var(--hexagon-gap));    
 }
 
 .center-container {
@@ -56,7 +57,7 @@
 #hexagon-01 {
     position: fixed;
     right: var(--hexagon-gap);
-    bottom: calc(var(--hexagon-gap) + var(--hexagon-dh)*2);
+    bottom: calc(var(--hexagon-gap) + var(--hexagon-hg));
     z-index: 999;
 }
 
