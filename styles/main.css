@@ -20,6 +20,7 @@
 }
 
 .hexagon {
+    position: fixed;    
     width: var(--hexagon-w);
     height: var(--hexagon-h);
     min-width: 40px;
@@ -29,12 +30,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    position: absolute;
+    /* position: absolute; */
     background: none;
     border: none;
     padding: 0;
     cursor: pointer;
     overflow: visible;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
 }
 
 .hexagon svg {
@@ -48,29 +52,25 @@
 }
 
 #hexagon-00 {
-    position: fixed;
     right: var(--hexagon-gap);
     bottom: var(--hexagon-gap);
     z-index: 1000;
 }
 
 #hexagon-01 {
-    position: fixed;
     right: var(--hexagon-gap);
-    bottom: calc(var(--hexagon-gap) + var(--hexagon-hg));
+    bottom: calc(var(--hexagon-gap)*1.5 + var(--hexagon-hg));
     z-index: 999;
 }
 
 #hexagon-02 {
-    position: fixed;
-    right: calc(var(--hexagon-gap) + var(--hexagon-dw)+ var(--hexagon-gap)*0.5);
+    right: calc(var(--hexagon-gap) + var(--hexagon-w));
     bottom: calc(var(--hexagon-gap) + var(--hexagon-dh));
     z-index: 999;
 }
 
 .hexagon-hamburger {
-    position: fixed;
-    right: max(2vw, 10px);
+    /* right: max(2vw, 10px);
     bottom: max(2vw, 10px);
     width: 8vw;
     height: 8vw;
@@ -81,12 +81,10 @@
     background: none;
     border: none;
     padding: 0;
-    cursor: pointer;
+    cursor: pointer; */
+
     z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: visible;
+
 }
 
 .hexagon-svg {
