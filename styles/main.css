@@ -2,7 +2,7 @@
     --hexagon-w: max(8vw, 40px);
     --hexagon-h: calc(var(--hexagon-w)*0.866);
     --hexagon-gap: max(2vw, 10px);
-    --hexagon-dw: calc(var(--hexagon-w) - var(--hexagon-gap));
+    --hexagon-dw: calc(var(--hexagon-w) - var(--hexagon-gap)*0.5);
     --hexagon-hg: calc(var(--hexagon-h) + var(--hexagon-gap));
     --hexagon-dh: calc(var(--hexagon-h)*0.5 + var(--hexagon-gap));    
 }
