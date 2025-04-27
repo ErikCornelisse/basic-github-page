@@ -2,16 +2,23 @@
     --hexagon-w: max(8vw, 40px);
     --hexagon-h: calc(var(--hexagon-w)*0.866);
     --hexagon-gap: max(2vw, 10px);
-    --hexagon-dw: calc(var(--hexagon-w) - var(--hexagon-gap));
     --hexagon-hg: calc(var(--hexagon-h) + var(--hexagon-gap));
-    --hexagon-dh: calc(var(--hexagon-h)*0.5 + var(--hexagon-gap));    
+    --hexagon-dh: calc((var(--hexagon-h) + var(--hexagon-gap))*0.5);    
 }
 
-.center-container {
+.whole-page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.center {
     display: flex;
-    justify-content: center;
     align-items: center;
-    height: 100vh;
+    justify-content: center;
+    pointer-events: none;
 }
 
 .center-logo {
@@ -36,6 +43,9 @@
     padding: 0;
     cursor: pointer;
     overflow: visible;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
 }
 
 .hexagon svg {
@@ -56,7 +66,7 @@
 
 #hexagon-01 {
     right: var(--hexagon-gap);
-    bottom: calc(var(--hexagon-gap)*1.5 + var(--hexagon-hg));
+    bottom: calc(var(--hexagon-gap) + var(--hexagon-hg));
     z-index: 999;
 }
 
@@ -66,26 +76,6 @@
     z-index: 999;
 }
 
-.hexagon-hamburger {
-    right: max(2vw, 10px);
-    bottom: max(2vw, 10px);
-    width: 8vw;
-    height: 8vw;
-    min-width: 40px;
-    min-height: 40px;
-    max-width: 100px;
-    max-height: 100px;
-    background: none;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: visible;
-}
-
 .hexagon-svg {
     width: 100%;
     height: 100%;
@@ -93,18 +83,6 @@
     position: absolute;
     top: 0;
     left: 0;
-    pointer-events: none;
-}
-
-.hamburger-center {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     pointer-events: none;
 }
 
@@ -130,11 +108,11 @@
     transition: all 0.8s cubic-bezier(.4,2,.6,1); /* reduced from 0.15s by 100% */
 }
 
-.hexagon-hamburger.active .hamburger-stripes {
+#hexagon-00.active .hamburger-stripes {
     gap: 0;
 }
 
-.hexagon-hamburger.active .stripe:nth-child(1) {
+#hexagon-00.active .stripe:nth-child(1) {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -143,11 +121,11 @@
     transform: translate(-50%, -50%) rotate(45deg);
 }
 
-.hexagon-hamburger.active .stripe:nth-child(2) {
+#hexagon-00.active .stripe:nth-child(2) {
     opacity: 0;
 }
 
-.hexagon-hamburger.active .stripe:nth-child(3) {
+#hexagon-00.active .stripe:nth-child(3) {
     position: absolute;
     top: 50%;
     left: 50%;
