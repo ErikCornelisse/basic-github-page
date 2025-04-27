@@ -1,6 +1,6 @@
 :root {
-    --center-logo-w: 240px;
-    --center-logo-h: 240px;
+    --center-logo-w: 50vw;
+    --center-logo-h: 50vw;
     --hexagon-w: max(8vw, 40px);
     --hexagon-h: calc(var(--hexagon-w)*0.866);
     --hexagon-gap: max(2vw, 10px);
@@ -20,10 +20,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    pointer-events: none;
+}
+.design{
+    border: 1px solid red;
 }
 
 .center-logo {
+    position: relative;
     width: var(--center-logo-w);
     height: var(--center-logo-h);
     z-index: 100;
@@ -61,27 +64,27 @@
     pointer-events: none;
 }
 #hexagon-C1 {
-    position: relative;
-    left: 64px;
-    top: 40px;    
-    z-index: 1000;
+    position: absolute;
+    left: calc(var(--center-logo-w)*0.265);
+    top: calc(var(--center-logo-w)*0.17);   
+    z-index: 1000;  
 }
 #hexagon-C2 {
-    position: relative;
-    left:100px;
-    top: 60px;
+    position: absolute;
+    left: calc(var(--center-logo-w)*0.405);
+    top: calc(var(--center-logo-w)*0.42); 
     z-index: 1000;
 }
 #hexagon-C3 {
-    position: relative;
-    left:169px;
-    top:16px;    
+    position: absolute;
+    left: calc(var(--center-logo-w)*0.705);
+    top: calc(var(--center-logo-w)*0.42);   
     z-index: 1000;
 }
 #hexagon-C4 {
-    position: relative;
-    left:64px;
-    top:40px;    
+    position: absolute;
+    left: calc(var(--center-logo-w)*0.265);
+    top: calc(var(--center-logo-w)*0.675);    
     z-index: 1000;
 }
 #hexagon-00 {
