@@ -30,15 +30,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    /* position: absolute; */
+    position: absolute;
     background: none;
     border: none;
     padding: 0;
     cursor: pointer;
     overflow: visible;
-    display: flex;
-    align-items: center;
-    justify-content: center;    
 }
 
 .hexagon svg {
@@ -70,7 +67,7 @@
 }
 
 .hexagon-hamburger {
-    /* right: max(2vw, 10px);
+    right: max(2vw, 10px);
     bottom: max(2vw, 10px);
     width: 8vw;
     height: 8vw;
@@ -81,10 +78,12 @@
     background: none;
     border: none;
     padding: 0;
-    cursor: pointer; */
-
+    cursor: pointer;
     z-index: 1000;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
 }
 
 .hexagon-svg {
