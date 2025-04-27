@@ -1,4 +1,6 @@
 :root {
+    --center-logo-w: 240px;
+    --center-logo-h: 240px;
     --hexagon-w: max(8vw, 40px);
     --hexagon-h: calc(var(--hexagon-w)*0.866);
     --hexagon-gap: max(2vw, 10px);
@@ -6,7 +8,7 @@
     --hexagon-dh: calc((var(--hexagon-h) + var(--hexagon-gap))*0.5);    
 }
 
-.whole-page {
+.whole {
     position: absolute;
     top: 0;
     left: 0;
@@ -22,8 +24,9 @@
 }
 
 .center-logo {
-    width: 240px;
-    height: 240px;
+    width: var(--center-logo-w);
+    height: var(--center-logo-h);
+    z-index: 100;
 }
 
 .hexagon {
@@ -57,25 +60,123 @@
     left: 0;
     pointer-events: none;
 }
-
+#hexagon-C1 {
+    position: relative;
+    left: 64px;
+    top: 40px;    
+    z-index: 1000;
+}
+#hexagon-C2 {
+    position: relative;
+    left:100px;
+    top: 60px;
+    z-index: 1000;
+}
+#hexagon-C3 {
+    position: relative;
+    left:169px;
+    top:16px;    
+    z-index: 1000;
+}
+#hexagon-C4 {
+    position: relative;
+    left:64px;
+    top:40px;    
+    z-index: 1000;
+}
 #hexagon-00 {
     right: var(--hexagon-gap);
     bottom: var(--hexagon-gap);
     z-index: 1000;
 }
-
-#hexagon-01 {
+#hexagon-02 {
     right: var(--hexagon-gap);
     bottom: calc(var(--hexagon-gap) + var(--hexagon-hg));
     z-index: 999;
 }
-
-#hexagon-02 {
+#hexagon-04 {
+    right: var(--hexagon-gap);
+    bottom: calc(var(--hexagon-gap) + var(--hexagon-hg)*2);
+    z-index: 999;
+}
+#hexagon-06 {
+    right: var(--hexagon-gap);
+    bottom: calc(var(--hexagon-gap) + var(--hexagon-hg)*3);
+    z-index: 999;
+}
+#hexagon-11 {
     right: calc(var(--hexagon-gap) + var(--hexagon-w));
     bottom: calc(var(--hexagon-gap) + var(--hexagon-dh));
     z-index: 999;
 }
+#hexagon-13 {
+    right: calc(var(--hexagon-gap) + var(--hexagon-w));
+    bottom: calc(var(--hexagon-gap) + var(--hexagon-dh)*3);
+    z-index: 999;
+}
+#hexagon-15 {
+    right: calc(var(--hexagon-gap) + var(--hexagon-w));
+    bottom: calc(var(--hexagon-gap) + var(--hexagon-dh)*5);
+    z-index: 999;
+}
+#hexagon-20 {
+    right: calc(var(--hexagon-gap) + var(--hexagon-w)*2);
+    bottom: var(--hexagon-gap);
+    z-index: 999;
+}
+#hexagon-22 {
+    right: calc(var(--hexagon-gap) + var(--hexagon-w)*2);
+    bottom: calc(var(--hexagon-gap) + var(--hexagon-hg));
+    z-index: 999;
+}
 
+#hexagon-24 {
+    right: calc(var(--hexagon-gap) + var(--hexagon-w)*2);
+    bottom: calc(var(--hexagon-gap) + var(--hexagon-hg)*2);
+    z-index: 999;
+}
+#hexagon-26 {
+    right: calc(var(--hexagon-gap) + var(--hexagon-w)*2);
+    bottom: calc(var(--hexagon-gap) + var(--hexagon-hg)*3);
+    z-index: 999;
+}
+#hexagon-31 {
+    right: calc(var(--hexagon-gap) + var(--hexagon-w)*3);
+    bottom: calc(var(--hexagon-gap) + var(--hexagon-dh));
+    z-index: 999;
+}
+
+#hexagon-33 {
+    right: calc(var(--hexagon-gap) + var(--hexagon-w)*3);
+    bottom: calc(var(--hexagon-gap) + var(--hexagon-dh)*3);
+    z-index: 999;
+}
+#hexagon-35 {
+    right: calc(var(--hexagon-gap) + var(--hexagon-w)*3);
+    bottom: calc(var(--hexagon-gap) + var(--hexagon-dh)*5);
+    z-index: 999;
+}
+#hexagon-40 {
+    right: calc(var(--hexagon-gap) + var(--hexagon-w)*4);
+    bottom: var(--hexagon-gap);
+    z-index: 999;
+}
+
+#hexagon-42 {
+    right: calc(var(--hexagon-gap) + var(--hexagon-w)*4);
+    bottom: calc(var(--hexagon-gap) + var(--hexagon-dh)*2);
+    z-index: 999;
+}
+#hexagon-44 {
+    right: calc(var(--hexagon-gap) + var(--hexagon-w)*4);
+    bottom: calc(var(--hexagon-gap) + var(--hexagon-dh)*4);
+    z-index: 999;
+}
+#hexagon-46 {
+    right: calc(var(--hexagon-gap) + var(--hexagon-w)*4);
+    bottom: calc(var(--hexagon-gap) + var(--hexagon-dh)*6);
+    z-index: 999;
+}
 .hexagon-svg {
     width: 100%;
     height: 100%;
